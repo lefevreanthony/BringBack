@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>accueil</h1><br>
+
+
+    
+    {% for evenement in evenement %}
+        <article>
+            <h1><a href="{{ path('personne_list',{id: evenement.id}) }}">{{ evenement.name }}</a></h1> 
+            <p>{{ evenement.place }}</p>
+            <p>{{ evenement.whattime| date("m/d/Y") }}</p>
+        </article>
+    {% else %}
+        <p>aucun evenement !</p>
+    {% endfor %}
+    <br>
+    <br>
+
+
+    <h2>
+        <a href="{{ path('evenement_create') }}">cree evenement</a>
+    </h2><br>
+</body>
+</html>

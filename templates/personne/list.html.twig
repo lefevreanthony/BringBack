@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liste des personne</title>
+</head>
+<body>
+    <h1>liste des personne </h1><br>
+
+    {% for personne in personne %}
+        <article>
+            <h1>{{ personne.name }}</h1> 
+            <p>{{ personne.food }}</p>
+            <p>{{ personne.drink }}</p>
+            <p>{{ personne.memo }}</p>
+        </article>
+    {% else %}
+        <p>aucune personne !</p>
+    {% endfor %}
+
+    <h2>
+        <a href="{{ path('personne_create' ) }}">cree personne</a>
+    </h2><br>
+</body>
+</html>
