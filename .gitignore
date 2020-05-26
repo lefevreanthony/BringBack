@@ -52,4 +52,4 @@
 /.web-server-pid
 
 # Logs (symfony 5)
-/.env
+*.env
