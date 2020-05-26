@@ -37,7 +37,7 @@ class Evenement
     /**
      * @ORM\OneToMany(targetEntity=Personne::class, mappedBy="evenement")
      */
-    private $evenements;
+    private $personnes;
 
     public function __construct()
     {
