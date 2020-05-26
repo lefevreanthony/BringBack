@@ -38,7 +38,7 @@ class Personne
     private $memo;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Evenement::class, inversedBy="evenement")
+     * @ORM\ManyToOne(targetEntity=Evenement::class, inversedBy="personnes")
      * @ORM\JoinColumn(nullable=false)
      */
     private $evenement;
