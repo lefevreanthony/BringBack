@@ -51,5 +51,5 @@
 # Embedded web-server pid file
 /.web-server-pid
 
-# Logs (symfony 5)
-*.env
+# Ignore files related to API keys
+.env
